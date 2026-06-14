@@ -5,3 +5,8 @@ hl.layer_rule({
     blur = true,
     blur_popups = true
 })
+
+hl.workspace_rule({ workspace = "9", layout = "scrolling" })
+hl.workspace_rule({ workspace = "name:coding", no_rounding = true, decorate = false, gaps_in = 0, gaps_out = 0, border_size = 1 })
+
+hl.window_rule({ match = { class = "Alacritty" }, rounding = 0, no_blur = true, opacity = "1.0 1.0 override"})
