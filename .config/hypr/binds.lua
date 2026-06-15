@@ -7,6 +7,7 @@ hl.bind("SUPER + W",              hl.dsp.exec_cmd("firefox")) -- Firefox
 hl.bind("SUPER + P",              hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) -- btop
 
 -- 2. Хоткеи оболочки
+hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. " bar-toggle")) -- Переключить панель
 hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle launcher")) -- Лаунчер
 hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region")) -- Скриншот
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана

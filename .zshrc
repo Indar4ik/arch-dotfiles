@@ -71,7 +71,7 @@ alias rmpkg="sudo pacman -Rsn"
 alias cleanch="paru -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="$XDG_CONFIG_HOME/hypr/scripts/update.sh"
-alias cachyos-rate-mirrors="sudo cachyos-rate-mirrors"
+alias mirrors="sudo cachyos-rate-mirrors"
 
 alias ls="lsd"
 alias l="ls -lA"

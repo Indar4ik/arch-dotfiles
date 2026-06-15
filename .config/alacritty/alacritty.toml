@@ -1,0 +1,23 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/noctalia.toml"
+]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["--login"]
+
+[font]
+size=13.0
+
+[font.normal]
+family = "MesloLGS Nerd Font"
+style = "Regular"
+
+[cursor.style]
+shape = "Beam"
+
+[window.padding]
+x = 10
+y = 10
+
