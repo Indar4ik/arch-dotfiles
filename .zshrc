@@ -81,6 +81,7 @@ alias find="fd -H"
 alias grep="rg"
 
 # Cleanup orphaned packages
+alias orph="paru -Qdtq"
 alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
 
 # Get the error messages from journalctl
