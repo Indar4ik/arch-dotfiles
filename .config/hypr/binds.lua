@@ -9,6 +9,7 @@ hl.bind("SUPER + P",              hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) --
 -- 2. Хоткеи оболочки
 hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. " bar-toggle")) -- Переключить панель
 hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle launcher")) -- Лаунчер
+hl.bind("SUPER + SHIFT + D",           hl.dsp.exec_cmd("rofi -show")) -- Rofi
 hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region")) -- Скриншот
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
 hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard")) -- Буфер обмена

@@ -78,7 +78,7 @@ alias l="ls -lA"
 alias la="ls -A"
 alias lt="ls --tree"
 alias find="fd -H"
-alias grep="rg"
+#alias grep="rg"
 
 # Cleanup orphaned packages
 alias orph="paru -Qdtq"
