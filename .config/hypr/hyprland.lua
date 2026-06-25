@@ -1,5 +1,5 @@
 -- Палитра noctalia
-require("noctalia")
+require("noctalia").apply_theme()
 
 require("monitor")
 require("input")
