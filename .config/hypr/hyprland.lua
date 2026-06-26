@@ -1,3 +1,5 @@
+require("env")
+
 -- Палитра noctalia
 require("noctalia").apply_theme()
 

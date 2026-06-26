@@ -22,9 +22,9 @@ hl.bind("SUPER + ALT + Alt_L",         hl.dsp.exec_cmd(v.ipc .. " panel-toggle s
 -- 3. Скрипты
 hl.bind("SUPER + CONTROL + U", hl.dsp.exec_cmd(v.terminal .. " --hold zsh " .. v.scripts .. "update.sh")) -- Обновление пакетов
 hl.bind("SUPER + CONTROL + H", hl.dsp.exec_cmd(v.terminal .. " --hold zsh -c 'cd ".. v.hypr .. "; vim ./'")) -- Конфиг hyprland
-hl.bind("SUPER + CONTROL + I", hl.dsp.exec_cmd(v.terminal .. " --hold fastfetch")) -- Конфиг hyprland
+hl.bind("SUPER + CONTROL + I", hl.dsp.exec_cmd(v.terminal .. " --hold fastfetch")) -- Fastfetch
 hl.bind("SUPER + Print",       hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename - --fullscreen --output-filename ~/Изображения/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png")) -- Скриншот satty
-hl.bind("SUPER + SHIFT + D",           hl.dsp.exec_cmd("rofi -show")) -- Rofi
+hl.bind("SUPER + SHIFT + D",   hl.dsp.exec_cmd("rofi -show")) -- Rofi
 --hl.bind("SUPER + V",         hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p 'Буфер обмена' | cliphist decode | wl-copy")) -- Буфер обмена
 --hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("cliphist wipe")) -- Очистить буфер обмена"
 
@@ -68,8 +68,9 @@ hl.define_submap("resize", function()
     hl.bind("escape", hl.dsp.submap("reset"))
 end)
 
--- 6. Управление Hyprland
-hl.bind("SUPER + CONTROL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) -- Выйти из WM
+-- 6. Hypr ecosystem
+hl.bind("SUPER + CONTROL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) -- Выйти из Hyrpland
+hl.bind("SUPER + SHIFT + L",   hl.dsp.exec_cmd("hyprlock")) -- Hyprlock
 
 -- 7. Перемещение фокуса
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "l" }), { repeating = true }) -- Влево
