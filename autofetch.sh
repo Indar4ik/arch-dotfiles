@@ -10,3 +10,4 @@ cp -rf $XDG_CONFIG_HOME/rofi .config/
 cp $HOME/.bashrc ./
 cp $HOME/.zshrc ./
 cp $HOME/.vimrc ./
+cp $HOME/.p10k.zsh ./
