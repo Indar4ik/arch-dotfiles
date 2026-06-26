@@ -38,7 +38,6 @@ alias _='sudo '
 alias c=clear
 alias cleanch='paru -Scc'
 alias cleanup='sudo pacman -Rns $(orph)'
-alias cp='nocorrect cp'
 alias egrep='grep -E'
 alias fgrep='grep -F'
 alias fixpacman='sudo rm /var/lib/pacman/db.lck'
@@ -253,11 +252,8 @@ alias gwtrm='git worktree remove'
 
 alias jctl='journalctl -p 3 -xb'
 alias make='make -j`nproc`'
-alias man='nocorrect man'
 alias md='mkdir -p'
 alias mirrors='sudo cachyos-rate-mirrors'
-alias mkdir='nocorrect mkdir'
-alias mv='nocorrect mv'
 alias n=ninja
 alias ninja='ninja -j`nproc`'
 alias orph='paru -Qtdq'
@@ -265,8 +261,6 @@ alias rd=rmdir
 alias rip='expac --timefmt='\''%Y-%m-%d %T'\'' '\''%l\t%n %v'\'' | sort | tail -200 | nl'
 alias rmpkg='sudo pacman -Rsn'
 alias run-help=man
-alias su='nocorrect su'
-alias sudo='nocorrect sudo'
 alias update=/home/indar4ik/.config/hypr/scripts/update.sh
 
 # Proxy
