@@ -9,7 +9,6 @@ hl.bind("SUPER + P",              hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) --
 -- 2. Хоткеи оболочки
 hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. " bar-toggle")) -- Переключить панель
 hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle launcher")) -- Лаунчер
-hl.bind("SUPER + SHIFT + D",           hl.dsp.exec_cmd("rofi -show")) -- Rofi
 hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region")) -- Скриншот
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
 hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard")) -- Буфер обмена
@@ -25,6 +24,7 @@ hl.bind("SUPER + CONTROL + U", hl.dsp.exec_cmd(v.terminal .. " --hold zsh " .. v
 hl.bind("SUPER + CONTROL + H", hl.dsp.exec_cmd(v.terminal .. " --hold zsh -c 'cd ".. v.hypr .. "; vim ./'")) -- Конфиг hyprland
 hl.bind("SUPER + CONTROL + I", hl.dsp.exec_cmd(v.terminal .. " --hold fastfetch")) -- Конфиг hyprland
 hl.bind("SUPER + Print",       hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename - --fullscreen --output-filename ~/Изображения/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png")) -- Скриншот satty
+hl.bind("SUPER + SHIFT + D",           hl.dsp.exec_cmd("rofi -show")) -- Rofi
 --hl.bind("SUPER + V",         hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p 'Буфер обмена' | cliphist decode | wl-copy")) -- Буфер обмена
 --hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("cliphist wipe")) -- Очистить буфер обмена"
 
