@@ -25,7 +25,7 @@
         },
         {
             "type": "cpu",
-            "format": "Intel Core i5-13400F",
+            "format": "{code-name}",
             "key": "│ ├󰻠 ",
             "keyColor": "green"
         },
