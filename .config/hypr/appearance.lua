@@ -27,6 +27,7 @@ hl.config({
             brightness = 0.9,
             popups = true,
             popups_ignorealpha = 0.3,
+            new_optimizations = true,
         },
     },
 

@@ -305,6 +305,6 @@ fi
 PS1="[\[\033[00;37m\]\t] ${USER_STYLE}${COLOR_RESET}@${COLOR_HOST}\h${COLOR_RESET}:${COLOR_DIR}\w${COLOR_GIT}\$(parse_git_branch)${COLOR_RESET}\$ "
 
 # Create a directory and move into it immediately
-mkcd() {
+mdcd() {
     mkdir -p "$1" && cd "$1"
 }
