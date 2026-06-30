@@ -12,7 +12,7 @@ hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle l
 hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region")) -- Скриншот
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
 hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard")) -- Буфер обмена
-hl.bind("SUPER + A",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center notifications")) -- Буфер обмена
+hl.bind("SUPER + N",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center notifications")) -- Уведомления
 hl.bind("SUPER + SHIFT + L",           hl.dsp.exec_cmd(v.ipc .. " session lock")) -- Заблокировать
 hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. " panel-toggle wallpaper")) -- Обои
 hl.bind("SUPER + SHIFT + Shift_L",     hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"), { release = true }) -- Панель управления 
@@ -92,8 +92,8 @@ hl.bind("SUPER + SHIFT + grave",       hl.dsp.window.move({ workspace = "name:co
 
 hl.bind("SUPER + S",                   hl.dsp.workspace.toggle_special("special"), { submap_universal = true }) -- Скрытый
 hl.bind("SUPER + SHIFT + S",           hl.dsp.window.move({ workspace = "special:special" }), { submap_universal = true }) -- Окно на скрытый
-hl.bind("SUPER + M",                   hl.dsp.workspace.toggle_special("coding"), { submap_universal = true }) -- Скрытый кодинг
-hl.bind("SUPER + SHIFT + M",           hl.dsp.window.move({ workspace = "special:coding" }), { submap_universal = true }) -- Окно на скрытый кодинг
+hl.bind("SUPER + A",                   hl.dsp.workspace.toggle_special("coding"), { submap_universal = true }) -- Скрытый кодинг
+hl.bind("SUPER + SHIFT + A",           hl.dsp.window.move({ workspace = "special:coding" }), { submap_universal = true }) -- Окно на скрытый кодинг
 
 hl.bind("SUPER + mouse_down",          hl.dsp.focus({ workspace = "-1" }), { submap_universal = true}) -- Предыдущий
 hl.bind("SUPER + mouse_up",            hl.dsp.focus({ workspace = "+1" }), { submap_universal = true}) -- Следующий
