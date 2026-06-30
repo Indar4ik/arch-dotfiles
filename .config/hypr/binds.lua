@@ -13,7 +13,7 @@ hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-reg
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
 hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard")) -- Буфер обмена
 hl.bind("SUPER + A",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center notifications")) -- Буфер обмена
-hl.bind("SUPER + L",                   hl.dsp.exec_cmd(v.ipc .. " session lock")) -- Заблокировать
+hl.bind("SUPER + SHIFT + L",           hl.dsp.exec_cmd(v.ipc .. " session lock")) -- Заблокировать
 hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. " panel-toggle wallpaper")) -- Обои
 hl.bind("SUPER + SHIFT + Shift_L",     hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"), { release = true }) -- Панель управления 
 hl.bind("SUPER + CONTROL + Control_L", hl.dsp.exec_cmd(v.ipc .. " settings-toggle"), { release = true }) -- Настройки
@@ -29,10 +29,10 @@ hl.bind("SUPER + SHIFT + D",   hl.dsp.exec_cmd("rofi -show")) -- Rofi
 --hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("cliphist wipe")) -- Очистить буфер обмена"
 
 -- 4. Приложения
-hl.bind("SUPER + T",         hl.dsp.exec_cmd("flatpak run org.telegram.desktop")) -- Telegram
-hl.bind("SUPER + G",         hl.dsp.exec_cmd("steam")) -- Steam
-hl.bind("SUPER + N",         hl.dsp.exec_cmd("throne")) -- Throne
-hl.bind("SUPER + SHIFT + G", hl.dsp.exec_cmd("flatpak run org.prismlauncher.PrismLauncher")) -- Prism
+hl.bind("SUPER + T",           hl.dsp.exec_cmd("flatpak run org.telegram.desktop")) -- Telegram
+hl.bind("SUPER + G",           hl.dsp.exec_cmd("steam")) -- Steam
+hl.bind("SUPER + N",           hl.dsp.exec_cmd("throne")) -- Throne
+hl.bind("SUPER + SHIFT + G",   hl.dsp.exec_cmd("flatpak run org.prismlauncher.PrismLauncher")) -- Prism
 
 -- 5. Управление окнами
 hl.bind("SUPER + SHIFT + Q",   hl.dsp.window.close()) -- Закрыть" 
@@ -70,7 +70,8 @@ end)
 
 -- 6. Hypr ecosystem
 hl.bind("SUPER + CONTROL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) -- Выйти из Hyrpland
-hl.bind("SUPER + SHIFT + L",   hl.dsp.exec_cmd("hyprlock")) -- Hyprlock
+hl.bind("SUPER + CONTROL + W", hl.dsp.exec_cmd("systemctl --user is-active --quiet hyprpaper.service && systemctl --user stop hyprpaper.service || systemctl --user start hyprpaper.service")) -- Переключить Hyprpaper
+hl.bind("SUPER + L",           hl.dsp.exec_cmd("hyprlock")) -- Hyprlock
 
 -- 7. Перемещение фокуса
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "l" }), { repeating = true }) -- Влево
@@ -86,13 +87,15 @@ for i = 1, 10 do
     hl.bind("SUPER + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { submap_universal = true }) -- Окно на i
 end
 
-hl.bind("SUPER + S",         hl.dsp.workspace.toggle_special("special"), { submap_universal = true }) -- Скрытый
-hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:special" }), { submap_universal = true }) -- Окно на скрытый
-hl.bind("SUPER + grave",         hl.dsp.focus({ workspace = "name:coding" }), { submap_universal = true }) -- Кодинг
-hl.bind("SUPER + SHIFT + grave", hl.dsp.window.move({ workspace = "name:coding" }), { submap_universal = true }) -- Окно на кодинг
+hl.bind("SUPER + grave",               hl.dsp.focus({ workspace = "name:coding" }), { submap_universal = true }) -- Кодинг
+hl.bind("SUPER + SHIFT + grave",       hl.dsp.window.move({ workspace = "name:coding" }), { submap_universal = true }) -- Окно на кодинг
 
-hl.bind("SUPER + mouse_down",         hl.dsp.focus({ workspace = "-1" }), { submap_universal = true}) -- Предыдущий
-hl.bind("SUPER + mouse_up",           hl.dsp.focus({ workspace = "+1" }), { submap_universal = true}) -- Следующий
-hl.bind("SUPER + SHIFT + mouse_down", hl.dsp.window.move({ workspace = "-1" }), { submap_universal = true}) -- Окно на предыдущий
-hl.bind("SUPER + SHIFT + mouse_up",   hl.dsp.window.move({ workspace = "+1" }), { submap_universal = true}) -- Окно на следующий
+hl.bind("SUPER + S",                   hl.dsp.workspace.toggle_special("special"), { submap_universal = true }) -- Скрытый
+hl.bind("SUPER + SHIFT + S",           hl.dsp.window.move({ workspace = "special:special" }), { submap_universal = true }) -- Окно на скрытый
+hl.bind("SUPER + M",                   hl.dsp.workspace.toggle_special("coding"), { submap_universal = true }) -- Скрытый кодинг
+hl.bind("SUPER + SHIFT + M",           hl.dsp.window.move({ workspace = "special:coding" }), { submap_universal = true }) -- Окно на скрытый кодинг
 
+hl.bind("SUPER + mouse_down",          hl.dsp.focus({ workspace = "-1" }), { submap_universal = true}) -- Предыдущий
+hl.bind("SUPER + mouse_up",            hl.dsp.focus({ workspace = "+1" }), { submap_universal = true}) -- Следующий
+hl.bind("SUPER + SHIFT + mouse_down",  hl.dsp.window.move({ workspace = "-1" }), { submap_universal = true}) -- Окно на предыдущий
+hl.bind("SUPER + SHIFT + mouse_up",    hl.dsp.window.move({ workspace = "+1" }), { submap_universal = true}) -- Окно на следующий
