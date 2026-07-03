@@ -115,7 +115,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$PATH:$HOME/.local/bin"
 
-# source /opt/intel/oneapi/setvars.sh
+# source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
 
 mdcd() {
   mkdir -p "$1" && cd "$1"

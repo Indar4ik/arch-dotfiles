@@ -302,3 +302,5 @@ PS1="[\[\033[00;37m\]\t] ${USER_STYLE}${COLOR_RESET}@${COLOR_HOST}\h${COLOR_RESE
 mdcd() {
     mkdir -p "$1" && cd "$1"
 }
+
+source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
