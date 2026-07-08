@@ -72,6 +72,7 @@ alias cleanch="paru -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="$XDG_CONFIG_HOME/hypr/scripts/update.sh"
 alias mirrors="sudo cachyos-rate-mirrors"
+alias gdux="sudo gdu -x /"
 
 alias ls="lsd"
 alias l="ls -lA"

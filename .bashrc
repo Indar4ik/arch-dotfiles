@@ -41,6 +41,7 @@ alias cleanup='sudo pacman -Rns $(orph)'
 alias egrep='grep -E'
 alias fgrep='grep -F'
 alias fixpacman='sudo rm /var/lib/pacman/db.lck'
+alias gdux='sudo gdu -x /'
 
 # Git shortcuts
 alias g=git
