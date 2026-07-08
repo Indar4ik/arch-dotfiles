@@ -304,4 +304,41 @@ mdcd() {
     mkdir -p "$1" && cd "$1"
 }
 
+github() {
+    local target_dir="${1:-.}"
+
+    if [ ! -d "$target_dir" ]; then
+        echo "Ошибка: Директория '$target_dir' не существует."
+        return 1
+    fi
+
+    (
+        cd "$target_dir" 2>/dev/null || return 1
+
+        if ! git rev-parse --is-inside-work-tree &>/dev/null; then
+            echo "Ошибка: Директория '$(pwd)' не является Git-репозиторием."
+            return 1
+        fi
+
+        local repo_url=$(git config --get remote.origin.url)
+
+        if [ -z "$repo_url" ]; then
+            echo "Ошибка: Удаленный репозиторий (origin) не настроен."
+            return 1
+        fi
+
+        local web_url=$repo_url
+        web_url=${web_url#git@}
+        web_url=${web_url#https://}
+        web_url=${web_url#http://}
+        web_url=${web_url//:/\/}
+        web_url=${web_url%.git}
+        web_url="https://$web_url"
+
+        echo "$web_url"
+
+        xdg-open "$web_url" &>/dev/null
+    )
+}
+
 source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
