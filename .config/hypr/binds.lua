@@ -31,7 +31,7 @@ hl.bind("SUPER + ALT + SHIFT + V", hl.dsp.exec_cmd("cliphist wipe"))            
 
 -- 4. Приложения
 hl.bind("SUPER + SHIFT + D",   hl.dsp.exec_cmd("rofi -show"))                                  -- Rofi
-hl.bind("SUPER + T",           hl.dsp.exec_cmd("flatpak run org.telegram.desktop"))            -- Telegram
+hl.bind("SUPER + T",           hl.dsp.exec_cmd("Telegram"))                                    -- Telegram
 hl.bind("SUPER + G",           hl.dsp.exec_cmd("steam"))                                       -- Steam
 hl.bind("SUPER + N",           hl.dsp.exec_cmd("throne"))                                      -- Throne
 hl.bind("SUPER + SHIFT + G",   hl.dsp.exec_cmd("flatpak run org.prismlauncher.PrismLauncher")) -- Prism
