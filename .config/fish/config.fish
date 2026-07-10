@@ -118,7 +118,7 @@ alias update='$XDG_CONFIG_HOME/hypr/scripts/update.sh'
 alias ls="lsd"
 alias l="ls -lA"
 alias la="ls -A"
-alias lt="ls --tree"
+alias lt="ls -A --tree"
 alias find="fd -H"
 alias grep="rg"
 
