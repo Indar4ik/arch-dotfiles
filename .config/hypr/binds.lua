@@ -12,6 +12,7 @@ hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle l
 hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region"))                                  -- Скриншот
 hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
 hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard"))                             -- Буфер обмена
+hl.bind("SUPER + SHIFT +  V",          hl.dsp.exec_cmd(v.ipc .. " clipboard-clear"))                                    -- Очистить буфер обмена
 hl.bind("SUPER + E",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center notifications"))          -- Уведомления
 hl.bind("SUPER + SHIFT + L",           hl.dsp.exec_cmd(v.ipc .. " session lock"))                                       -- Заблокировать
 hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. " panel-toggle wallpaper"))                             -- Обои
