@@ -42,6 +42,7 @@ alias egrep='grep -E'
 alias fgrep='grep -F'
 alias fixpacman='sudo rm /var/lib/pacman/db.lck'
 alias gdux='sudo gdu -x /'
+alias psfind='ps aux | grep -v grep | grep'
 
 # Git shortcuts
 alias g=git
