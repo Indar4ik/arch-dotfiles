@@ -17,7 +17,7 @@ hl.bind("SUPER + E",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle c
 hl.bind("SUPER + SHIFT + L",           hl.dsp.exec_cmd(v.ipc .. " session lock"))                                       -- Заблокировать
 hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. " panel-toggle wallpaper"))                             -- Обои
 hl.bind("SUPER + SHIFT + Shift_L",     hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"), { release = true })    -- Панель управления 
-hl.bind("SUPER + TAB",                 hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"))                        -- Панель управления 
+hl.bind("SUPER + Q",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"))                        -- Панель управления 
 hl.bind("SUPER + CONTROL + Control_L", hl.dsp.exec_cmd(v.ipc .. " settings-toggle"), { release = true })                -- Настройки
 hl.bind("SUPER + ALT + Alt_L",         hl.dsp.exec_cmd(v.ipc .. " panel-toggle session"), { release = true })           -- Меню сеанса
 hl.bind("ALT + TAB",                   hl.dsp.exec_cmd(v.ipc .. " window-switcher"))                                    -- Переключатель окон
