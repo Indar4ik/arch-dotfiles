@@ -74,7 +74,7 @@ end)
 
 -- 6. Hypr ecosystem
 hl.bind("SUPER + CONTROL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) -- Выйти из Hyrpland
-hl.bind("SUPER + CONTROL + W", hl.dsp.exec_cmd("systemctl --user is-active --quiet hyprpaper.service && systemctl --user stop hyprpaper.service || systemctl --user start hyprpaper.service")) -- Переключить Hyprpaper
+hl.bind("SUPER + CONTROL + W", hl.dsp.exec_cmd("$HOME/.config/hypr/scripts/toggle.sh")) -- Переключить Hyprpaper
 hl.bind("SUPER + L",           hl.dsp.exec_cmd("hyprlock")) -- Hyprlock
 
 -- 7. Перемещение фокуса
