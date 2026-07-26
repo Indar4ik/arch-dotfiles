@@ -1,10 +1,11 @@
 local v = require("vars")
 
 -- 1. Базовые программы
-hl.bind("SUPER + RETURN",         hl.dsp.exec_cmd(v.terminal))                -- Kitty
-hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(v.fileManager))             -- Thunar
-hl.bind("SUPER + W",              hl.dsp.exec_cmd("firefox"))                 -- Firefox
-hl.bind("SUPER + P",              hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) -- btop
+hl.bind("SUPER + RETURN",           hl.dsp.exec_cmd(v.terminal))                -- Kitty
+hl.bind("SUPER + CONTROL + RETURN", hl.dsp.exec_cmd(v.terminal1))               -- Thunar
+hl.bind("SUPER + SHIFT + RETURN",   hl.dsp.exec_cmd(v.fileManager))             -- Thunar
+hl.bind("SUPER + W",                hl.dsp.exec_cmd("firefox"))                 -- Firefox
+hl.bind("SUPER + P",                hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) -- btop
 
 -- 2. Хоткеи оболочки
 hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. " bar-toggle"))                                         -- Переключить панель
