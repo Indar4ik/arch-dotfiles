@@ -38,7 +38,7 @@ hl.bind("SUPER + N",           hl.dsp.exec_cmd("throne"))                       
 hl.bind("SUPER + SHIFT + G",   hl.dsp.exec_cmd("flatpak run org.prismlauncher.PrismLauncher")) -- Prism
 
 -- 5. Управление окнами
-hl.bind("SUPER + SHIFT + Q",   hl.dsp.window.close()) -- Закрыть" 
+hl.bind("SUPER + SHIFT + Q",   hl.dsp.window.close())                                                -- Закрыть 
 hl.bind("SUPER + F",           hl.dsp.window.fullscreen({ action = "toggle", mode = "maximized" }))  -- Развернуть 
 hl.bind("SUPER + SHIFT + F",   hl.dsp.window.fullscreen({ action = "toggle", mode = "fullscreen" })) -- Полноэкранный режим 
 hl.bind("SUPER + CONTROL + F", hl.dsp.window.float({ action = "toggle" }))                           -- Плавающий режим 
