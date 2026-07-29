@@ -4,7 +4,7 @@
   fg: #c8c093;
   accent: #76946a;
   accent-fg: #1f1f28;
-  border: #676785;
+  border: #68697a;
 }
 
 window {

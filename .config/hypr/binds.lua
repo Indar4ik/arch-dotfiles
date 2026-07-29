@@ -36,7 +36,7 @@ hl.bind("SUPER + SHIFT + D",   hl.dsp.exec_cmd(v.launcher .. "type-1/style-5.ras
 hl.bind("SUPER + T",           hl.dsp.exec_cmd("Telegram"))                                    -- Telegram
 hl.bind("SUPER + G",           hl.dsp.exec_cmd("steam"))                                       -- Steam
 hl.bind("SUPER + N",           hl.dsp.exec_cmd("throne"))                                      -- Throne
-hl.bind("SUPER + SHIFT + G",   hl.dsp.exec_cmd("flatpak run org.prismlauncher.PrismLauncher")) -- Prism
+hl.bind("SUPER + SHIFT + G",   hl.dsp.exec_cmd("prismlauncher"))                               -- Prism
 
 -- 5. Управление окнами
 hl.bind("SUPER + SHIFT + Q",   hl.dsp.window.close())                                                -- Закрыть 
