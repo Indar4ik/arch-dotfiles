@@ -104,3 +104,5 @@ hl.bind("SUPER + mouse_down",          hl.dsp.focus({ workspace = "-1" }), { sub
 hl.bind("SUPER + mouse_up",            hl.dsp.focus({ workspace = "+1" }), { submap_universal = true})                     -- Следующий
 hl.bind("SUPER + SHIFT + mouse_down",  hl.dsp.window.move({ workspace = "-1" }), { submap_universal = true})               -- Окно на предыдущий
 hl.bind("SUPER + SHIFT + mouse_up",    hl.dsp.window.move({ workspace = "+1" }), { submap_universal = true})               -- Окно на следующий
+hl.bind("SUPER + SHIFT + left",        hl.dsp.window.move({ workspace = "-1" }), { submap_universal = true})               -- Окно на предыдущий
+hl.bind("SUPER + SHIFT + right",       hl.dsp.window.move({ workspace = "+1" }), { submap_universal = true})               -- Окно на следующий
