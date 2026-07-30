@@ -8,6 +8,7 @@ cp -r $XDG_CONFIG_HOME/btop .config/
 cp -r $XDG_CONFIG_HOME/tmux .config/
 cp -r $XDG_CONFIG_HOME/rofi .config/
 cp -r $XDG_CONFIG_HOME/cava .config/
+cp -r $XDG_CONFIG_HOME/yazi .config/
 cp $HOME/.bashrc ./
 cp $HOME/.zshrc ./
 cp $HOME/.vimrc ./
