@@ -67,7 +67,7 @@ alias make="make -j`nproc`"
 alias ninja="ninja -j`nproc`"
 alias n="ninja"
 alias c="clear"
-alias rmpkg="sudo pacman -Rsn"
+alias rmpkg="paru -Rns"
 alias cleanch="paru -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="$XDG_CONFIG_HOME/hypr/scripts/update.sh"
@@ -84,7 +84,8 @@ alias find="fd -H"
 
 # Cleanup orphaned packages
 alias orph="paru -Qdtq"
-alias cleanup="sudo pacman -Rns $(orph)"
+#alias cleanup="rmpkg $(orph | tr '\n' ' ')"
+alias cleanup="paru -c"
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"

@@ -11,7 +11,6 @@ hl.layer_rule({
     match = { namespace = "rofi" },
     ignore_alpha = 0.5,
     blur = true,
-    blur_popups = true
 })
 
 hl.workspace_rule({ workspace = "9", layout = "scrolling" })
