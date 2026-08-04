@@ -33,5 +33,11 @@ hl.config({
 
     animations = {
         enabled = true,
-    }
+    },
+
+    misc = {
+        disable_hyprland_logo = false,
+        disable_splash_rendering = true,
+        force_default_wallpaper = 1,
+    },
 })
