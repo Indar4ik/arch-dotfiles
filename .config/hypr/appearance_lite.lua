@@ -20,7 +20,7 @@ hl.config({
 
     animations = {
         enabled = false,
-    }
+    },
 
     misc = {
         disable_hyprland_logo = false,
