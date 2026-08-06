@@ -1,4 +1,4 @@
 paru -Syu
-flatpak update
+#flatpak update
 cargo install-update --all
 npm update
