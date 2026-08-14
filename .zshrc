@@ -118,7 +118,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$PATH:$HOME/.local/bin"
 
-# source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
+#source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
+
+# kimi-code
+#export PATH="/home/indar4ik/.kimi-code/bin:$PATH"
 
 mdcd() {
   mkdir -p "$1" && cd "$1"

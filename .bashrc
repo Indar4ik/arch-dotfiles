@@ -344,3 +344,6 @@ github() {
 }
 
 #source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
+
+# kimi-code
+#export PATH="/home/indar4ik/.kimi-code/bin:$PATH"
