@@ -1,5 +1,6 @@
 cp -r $XDG_CONFIG_HOME/hypr .config/
 cp -r $XDG_CONFIG_HOME/niri .config/
+cp -r $XDG_CONFIG_HOME/nvim .config/
 cp -r $XDG_CONFIG_HOME/kitty .config/
 cp -r $XDG_CONFIG_HOME/alacritty .config/
 cp -r $XDG_CONFIG_HOME/fish .config/

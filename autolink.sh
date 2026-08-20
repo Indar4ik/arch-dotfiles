@@ -3,6 +3,7 @@ ln -sf $(pwd)/.zshrc $HOME/
 ln -sf $(pwd)/.vimrc $HOME/
 ln -sf $(pwd)/.p10k.zsh $HOME/
 ln -sf $(pwd)/.config/kitty $HOME/.config/
+ln -sf $(pwd)/.config/nvim $HOME/.config/
 ln -sf $(pwd)/.config/alacrity $HOME/.config/
 ln -sf $(pwd)/.config/fish $HOME/.config/
 ln -sf $(pwd)/.config/fastfetch $HOME/.config/
