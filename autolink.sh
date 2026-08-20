@@ -6,6 +6,7 @@ ln -sf $(pwd)/.config/kitty $HOME/.config/
 ln -sf $(pwd)/.config/alacrity $HOME/.config/
 ln -sf $(pwd)/.config/fish $HOME/.config/
 ln -sf $(pwd)/.config/fastfetch $HOME/.config/
+ln -sf $(pwd)/.config/bat $HOME/.config/
 ln -sf $(pwd)/.config/btop $HOME/.config/
 ln -sf $(pwd)/.config/tmux $HOME/.config/
 ln -sf $(pwd)/.config/rofi $HOME/.config/
