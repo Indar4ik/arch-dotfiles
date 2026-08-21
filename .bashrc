@@ -36,7 +36,7 @@ alias 8='cd -8'
 alias 9='cd -9'
 alias _='sudo '
 alias c=clear
-alias cleanch='paru -Scc'
+alias cleanch='$XDG_CONFIG_HOME/hypr/scripts/cleanch.sh'
 alias rmpkg='paru -Rns'
 alias cleanup='paru -c'
 alias egrep='grep -E'
@@ -264,7 +264,7 @@ alias rd=rmdir
 alias rip='expac --timefmt='\''%Y-%m-%d %T'\'' '\''%l\t%n %v'\'' | sort | tail -200 | nl'
 alias rmpkg='sudo pacman -Rsn'
 alias run-help=man
-alias update=/home/indar4ik/.config/hypr/scripts/update.sh
+alias update='$XDG_CONFIG_HOME/hypr/scripts/update.sh'
 
 # Proxy
 alias voff='unset ALL_PROXY; unset HTTP_PROXY; unset http_proxy; unset HTTPS_PROXY'
@@ -343,7 +343,4 @@ github() {
     )
 }
 
-#source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
-
-# kimi-code
-#export PATH="/home/indar4ik/.kimi-code/bin:$PATH"
+source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1

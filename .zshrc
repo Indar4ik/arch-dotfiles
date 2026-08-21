@@ -68,7 +68,7 @@ alias ninja="ninja -j`nproc`"
 alias n="ninja"
 alias c="clear"
 alias rmpkg="paru -Rns"
-alias cleanch="paru -Scc; go clean -cache -testcache -modcache; cargo cache -a"
+alias cleanch="$XDG_CONFIG_HOME/hypr/scripts/cleanch.sh"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="$XDG_CONFIG_HOME/hypr/scripts/update.sh"
 alias mirrors="sudo cachyos-rate-mirrors"
@@ -115,13 +115,9 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 export FZF_BASE=/usr/share/fzf
 
 export PATH="$HOME/.cargo/bin:$PATH"
-
 export PATH="$PATH:$HOME/.local/bin"
 
-#source /opt/intel/oneapi/setvars.sh > /dev/null 2>&1
-
-# kimi-code
-#export PATH="/home/indar4ik/.kimi-code/bin:$PATH"
+#source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
 
 mdcd() {
   mkdir -p "$1" && cd "$1"
