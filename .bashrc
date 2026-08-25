@@ -343,11 +343,11 @@ github() {
     )
 }
 
-#source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
+source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
 
-icpx() {
-    unset -f icpx icx
-    source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
-    command icpx "$@"
-}
-icx() { icpx; command icx "$@"; }
+#icpx() {
+#   unset -f icpx icx
+#   source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
+#   command icpx "$@"
+#}
+#icx() { icpx; command icx "$@"; }
