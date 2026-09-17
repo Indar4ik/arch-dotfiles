@@ -62,15 +62,16 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
 #alias open="xdg-open"
 alias make="make -j`nproc`"
 alias ninja="ninja -j`nproc`"
 alias n="ninja"
 alias c="clear"
 alias rmpkg="paru -Rns"
-alias cleanch="$XDG_CONFIG_HOME/hypr/scripts/cleanch.sh"
+alias cleanch="$CONFIG_DIR/hypr/scripts/cleanch.sh"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias update="$XDG_CONFIG_HOME/hypr/scripts/update.sh"
+alias update="$CONFIG_DIR/hypr/scripts/update.sh"
 alias mirrors="sudo cachyos-rate-mirrors"
 alias gdux="sudo gdu -x /"
 alias psfind="ps aux | rg -v rg | rg"
@@ -117,7 +118,7 @@ export FZF_BASE=/usr/share/fzf
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
-#source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
+#source /opt/intel/oneapi/setvars.sh --config=$CONFIG_DIR/oneapi.txt > /dev/null 2>&1
 
 mdcd() {
   mkdir -p "$1" && cd "$1"

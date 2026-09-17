@@ -10,6 +10,8 @@ shopt -s cdspell                        # Auto-correct minor cd typos
 shopt -s autocd                         # Typing a directory name enters it
 shopt -s checkwinsize                   # Update lines/columns after every command
 
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+
 alias path='echo -e ${PATH//:/\\n}'
 alias ls='ls --color=auto -h'
 alias grep='grep --color=auto'
@@ -36,7 +38,7 @@ alias 8='cd -8'
 alias 9='cd -9'
 alias _='sudo '
 alias c=clear
-alias cleanch='$XDG_CONFIG_HOME/hypr/scripts/cleanch.sh'
+alias cleanch='$CONFIG_DIR/hypr/scripts/cleanch.sh'
 alias rmpkg='paru -Rns'
 alias cleanup='paru -c'
 alias egrep='grep -E'
@@ -264,7 +266,7 @@ alias rd=rmdir
 alias rip='expac --timefmt='\''%Y-%m-%d %T'\'' '\''%l\t%n %v'\'' | sort | tail -200 | nl'
 alias rmpkg='sudo pacman -Rsn'
 alias run-help=man
-alias update='$XDG_CONFIG_HOME/hypr/scripts/update.sh'
+alias update='$CONFIG_DIR/hypr/scripts/update.sh'
 
 # Proxy
 alias voff='unset ALL_PROXY; unset HTTP_PROXY; unset http_proxy; unset HTTPS_PROXY'
@@ -343,11 +345,11 @@ github() {
     )
 }
 
-source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
+source /opt/intel/oneapi/setvars.sh --config=$HOME/.config/oneapi.txt > /dev/null 2>&1
 
 #icpx() {
 #   unset -f icpx icx
-#   source /opt/intel/oneapi/setvars.sh --config=$XDG_CONFIG_HOME/oneapi.txt > /dev/null 2>&1
+#   source /opt/intel/oneapi/setvars.sh --config=$CONFIG_DIR/oneapi.txt > /dev/null 2>&1
 #   command icpx "$@"
 #}
 #icx() { icpx; command icx "$@"; }
