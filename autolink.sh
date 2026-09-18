@@ -4,6 +4,7 @@ ln -sf $(pwd)/.bashrc $HOME/
 ln -sf $(pwd)/.zshrc $HOME/
 ln -sf $(pwd)/.vimrc $HOME/
 ln -sf $(pwd)/.p10k.zsh $HOME/
+ln -sf $(pwd)/.clang-format $HOME/
 ln -sf $(pwd)/.config/kitty $CONFIG_DIR
 ln -sf $(pwd)/.config/nvim $CONFIG_DIR
 ln -sf $(pwd)/.config/alacrity $CONFIG_DIR
