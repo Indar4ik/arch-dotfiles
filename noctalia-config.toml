@@ -1,0 +1,518 @@
+[audio]
+enable_sounds = true
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.59999998658895493
+    center = [ "weather", "Spacer1", "workspaces", "Spacer1", "group:g1" ]
+    end = [ "audio_visualizer", "media", "tray", "Spacer", "date", "control-center", "clock", "notifications" ]
+    font_family = "Adwaita Sans"
+    font_weight = 600
+    radius = 10
+    shadow = false
+    start = [ "group:g2" ]
+    thickness = 24
+
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "volume", "network", "keyboard_layout" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.default.capsule_group]]
+        border = ""
+        enabled = true
+        fill = "#373747"
+        id = "g2"
+        members = [ "recorder", "wallhaven", "power_profile" ]
+        opacity = 1.0
+        padding = 6.0
+
+[battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
+warning_threshold = 20
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "mic_mute"
+
+[[control_center.shortcuts]]
+type = "noctalia/screen_recorder:toggle"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[desktop_widgets]
+schema_version = 1
+widget_order = [
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000007"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 144.0
+    box_width = 352.0
+    cx = 1728.0
+    cy = 142.20001220703125
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        color = "on_surface"
+        font_family = "JetBrainsMono Nerd Font"
+        forecast_days = 3
+        shadow = false
+        show_forecast = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 154.23312377929688
+    box_width = 393.29446411132812
+    cx = 212.64723205566406
+    cy = 129.10000610351562
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        font_family = ""
+        layout = "horizontal"
+        shadow = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 280.0
+    box_width = 1104.0
+    cx = 960.0
+    cy = 940.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10.0
+        background_radius = 12.0
+        bands = 64.0
+        centered = false
+        color_1 = "primary"
+        color_2 = "primary"
+        mirrored = true
+        show_when_idle = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 186.0
+    cy = 418.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10.0
+        background_radius = 12.0
+        bar_width = 0.59999999999999998
+        bloom_intensity = 0.60000000000000009
+        fade_when_idle = true
+        inner_diameter = 0.69999999999999996
+        primary_color = "primary"
+        ring_opacity = 0.80000000000000004
+        rotation_speed = 0.5
+        secondary_color = "secondary"
+        sensitivity = 1.6000000000000001
+        visualization_mode = "bars_rings"
+        wave_thickness = 1.0
+
+    [desktop_widgets.widget.desktop-widget-0000000000000007]
+    box_height = 200.0
+    box_width = 376.0
+    cx = 960.0
+    cy = 140.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
+        background = false
+        font_family = "JetBrainsMono Nerd Font"
+        shadow = false
+
+[dock]
+auto_hide = true
+background_opacity = 0.69999998435378075
+
+[hooks]
+started = "noctalia msg caffeine-enable"
+
+[idle]
+pre_action_fade_seconds = 0
+
+[location]
+address = "Moscow, Russia"
+
+[lockscreen]
+blur_intensity = 0.29999999999999999
+blurred_desktop = true
+fingerprint = false
+tint_intensity = 0.14999999999999999
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 1
+widget_order = [
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 960.30078125
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.0
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 0.59999999999999998
+        input_radius = 32.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 304.0
+    box_width = 752.0
+    cx = 1648.0
+    cy = 928.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        bands = 64.0
+        centered = false
+        show_when_idle = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 352.0
+    box_width = 368.0
+    cx = 960.0
+    cy = 540.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10.0
+        background_radius = 12.0
+        bar_width = 0.59999999999999998
+        bloom_intensity = 0.5
+        fade_when_idle = true
+        inner_diameter = 0.69999999999999996
+        primary_color = "primary"
+        ring_opacity = 0.80000000000000004
+        rotation_speed = 0.5
+        secondary_color = "secondary"
+        sensitivity = 1.5
+        visualization_mode = "all"
+        wave_thickness = 0.90000000000000002
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 200.0
+    box_width = 368.0
+    cx = 960.0
+    cy = 140.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+        clock_style = "digital"
+        font_family = "JetBrainsMono Nerd Font"
+        shadow = false
+
+[nightlight]
+enabled = true
+
+[notification]
+background_opacity = 0.59999998658895493
+layer = "overlay"
+
+[osd]
+background_opacity = 0.59999998658895493
+keyboard_layout = false
+lock_keys = false
+position = "top_right"
+scale = 0.95000000670552254
+
+    [osd.kinds]
+    keyboard_layout = false
+    media = false
+
+[plugin_settings."noctalia/screen_recorder"]
+audio_source = "both"
+directory = "~/Видео/Records"
+frame_rate = 100
+quality = "medium"
+video_codec = "av1"
+
+[plugins]
+enabled = [
+    "noctalia/bongocat",
+    "noctalia/kaomoji",
+    "noctalia/notes",
+    "noctalia/timer",
+    "noctalia/wallhaven",
+    "noctalia/screen_recorder"
+]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+app_icon_color = "on_surface"
+avatar_path = "/home/indar4ik/face.png"
+clipboard_history_max_entries = 512
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+
+    [shell.launcher.providers.calculator]
+    prefix = "calc"
+
+    [shell.launcher.providers.emoji]
+    prefix = "emo"
+
+    [shell.launcher.providers.wallpaper]
+    prefix = "wall"
+
+    [shell.launcher.providers.windows]
+    prefix = "win"
+
+    [shell.panel]
+    open_near_click_control_center = true
+    open_near_click_session = true
+    session_position = "center"
+    transparency_mode = "glass"
+
+    [shell.screenshot]
+    copy_to_clipboard = true
+    directory = "/home/indar4ik/Изображения/Screenshots"
+    filename_pattern = "%Y%m%d_%H%M%S"
+    freeze_screen = true
+
+[theme]
+builtin = "Kanagawa"
+community_palette = "Kanagawa Kasumi"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "discord", "prismlauncher", "steam", "rofi", "zathura", "hyprtoolkit", "bat", "lazygit", "yazi" ]
+
+[wallpaper]
+directory = "~/Изображения/Wallpapers"
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+
+    [wallpaper.last]
+    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+
+    [wallpaper.monitors.DP-3]
+    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+
+[weather]
+address = "Moscow, Russia"
+
+[widget.Spacer]
+length = 16
+type = "spacer"
+
+[widget.Spacer1]
+length = 16
+type = "spacer"
+
+[widget.active_window]
+max_length = 112
+title_scroll = "on_hover"
+
+[widget.audio_visualizer]
+bands = 28
+centered = false
+width = 112.0
+
+[widget.bongocat]
+audio_spectrum = true
+script = "scripts/bongocat.lua"
+tappy_mode = true
+type = "scripted"
+
+[widget.cat]
+audio_spectrum = true
+input_device = "/dev/input/event8"
+tappy_mode = true
+type = "noctalia/bongocat:cat"
+
+[widget.cat_2]
+input_device = "/dev/input/event8"
+type = "noctalia/bongocat:cat"
+
+[widget.clock]
+format = "{:%H•%M}"
+scale = 1.05
+
+[widget.control-center]
+glyph = "spiral"
+scale = 1.2000000000000002
+
+[widget.date]
+format = "{:%a, %d %b}"
+
+[widget.keyboard_layout]
+hide_when_single_layout = true
+show_glyph = false
+
+[widget.media]
+art_size = 32.0
+hide_when_no_media = true
+max_length = 270
+
+[widget.network]
+show_label = false
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.screen_recorder]
+audio_source = "both"
+directory = "/home/indar4ik/Видео/Records"
+hide_inactive = true
+script = "scripts/screen_recorder.lua"
+type = "scripted"
+video_codec = "hevc"
+
+[widget.sysmon]
+stat = "gpu_vram"
+
+[widget.tray]
+drawer_columns = 4
+
+[widget.wallhaven]
+glyph = "wallpaper-selector"
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.weather]
+scale = 1.05
+show_condition = false
+
+[widget.workspaces]
+anchor = true
+label_source = "name"
+max_label_chars = 3
+scale = 1.05
+style = "focus_hint"
