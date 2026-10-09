@@ -267,6 +267,7 @@ alias rip='expac --timefmt='\''%Y-%m-%d %T'\'' '\''%l\t%n %v'\'' | sort | tail -
 alias rmpkg='sudo pacman -Rsn'
 alias run-help=man
 alias update='$CONFIG_DIR/hypr/scripts/update.sh'
+alias unlockme='faillock --user $(whoami) --reset'
 
 # Proxy
 alias voff='unset ALL_PROXY; unset HTTP_PROXY; unset http_proxy; unset HTTPS_PROXY'

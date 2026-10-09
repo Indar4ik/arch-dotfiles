@@ -75,6 +75,7 @@ alias update="$CONFIG_DIR/hypr/scripts/update.sh"
 alias mirrors="sudo cachyos-rate-mirrors"
 alias gdux="sudo gdu -x /"
 alias psfind="ps aux | rg -v rg | rg"
+alias unlockme="faillock --user $(whoami) --reset"
 
 alias ls="lsd"
 alias l="ls -lA"
