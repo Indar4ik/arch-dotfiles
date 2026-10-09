@@ -4,7 +4,10 @@ UseTab: Never
 IndentWidth: 4
 TabWidth: 4
 ColumnLimit: 0
+IndentCaseLabels: true
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AllowShortLoopsOnASingleLine: true
 AllowShortBlocksOnASingleLine: true
+AllowCaseLabelsOnASingleLine: true
+PointerAlignment: Left
 ...
