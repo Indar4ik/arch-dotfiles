@@ -14,6 +14,7 @@ cp -r $CONFIG_DIR/rofi .config/
 cp -r $CONFIG_DIR/cava .config/
 cp -r $CONFIG_DIR/yazi .config/
 cp -r $CONFIG_DIR/elio .config/
+cp -r $CONFIG_DIR/lazygit .config/
 cp $HOME/.bashrc ./
 cp $HOME/.zshrc ./
 cp $HOME/.vimrc ./

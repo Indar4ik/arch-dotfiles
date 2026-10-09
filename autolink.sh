@@ -17,6 +17,7 @@ ln -sf $(pwd)/.config/rofi $CONFIG_DIR
 ln -sf $(pwd)/.config/cava $CONFIG_DIR
 ln -sf $(pwd)/.config/yazi $CONFIG_DIR
 ln -sf $(pwd)/.config/elio $CONFIG_DIR
+ln -sf $(pwd)/.config/lazygit $CONFIG_DIR
 
 ln -sf $(pwd)/.config/hypr $CONFIG_DIR
 ln -sf $(pwd)/.config/niri $CONFIG_DIR
