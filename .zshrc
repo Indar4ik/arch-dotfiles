@@ -76,6 +76,7 @@ alias mirrors="sudo cachyos-rate-mirrors"
 alias gdux="sudo gdu -x /"
 alias psfind="ps aux | rg -v rg | rg"
 alias unlockme="faillock --user $(whoami) --reset"
+alias du="du -h"
 
 alias ls="lsd"
 alias l="ls -lA"

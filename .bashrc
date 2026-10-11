@@ -268,6 +268,7 @@ alias rmpkg='sudo pacman -Rsn'
 alias run-help=man
 alias update='$CONFIG_DIR/hypr/scripts/update.sh'
 alias unlockme='faillock --user $(whoami) --reset'
+alias du='du -h'
 
 # Proxy
 alias voff='unset ALL_PROXY; unset HTTP_PROXY; unset http_proxy; unset HTTPS_PROXY'
