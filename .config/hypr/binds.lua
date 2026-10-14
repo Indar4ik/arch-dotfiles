@@ -27,7 +27,7 @@ hl.bind("ALT + TAB",                   hl.dsp.exec_cmd(v.ipc .. " window-switche
 hl.bind("SUPER + CONTROL + U", hl.dsp.exec_cmd(v.terminal .. " --hold zsh " .. v.scripts .. "update.sh"))               -- Обновление пакетов
 hl.bind("SUPER + CONTROL + H", hl.dsp.exec_cmd(v.terminal .. " --hold zsh -c 'cd ".. v.hypr .. "; vim ./'"))            -- Конфиг hyprland
 hl.bind("SUPER + CONTROL + I", hl.dsp.exec_cmd(v.terminal .. " --hold fastfetch"))                                      -- Fastfetch
-hl.bind("SUPER + Print",       hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename - --fullscreen --output-filename ~/Изображения/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png")) -- Скриншот satty
+hl.bind("SUPER + Print",       hl.dsp.exec_cmd("grim -g \"$(slurp -d -b 000000b0 -c 76946a -B 1f1f28)\" - | satty --filename - --fullscreen --output-filename ~/Изображения/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png")) -- Скриншот satty
 hl.bind("SUPER + ALT + V",     hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p 'Буфер обмена' | cliphist decode | wl-copy")) -- Буфер обмена
 hl.bind("SUPER + ALT + SHIFT + V", hl.dsp.exec_cmd("cliphist wipe"))                                                    -- Очистить буфер обмена
 
