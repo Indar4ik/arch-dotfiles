@@ -9,19 +9,20 @@ hl.bind("SUPER + P",                hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) 
 
 -- 2. Хоткеи оболочки
 hl.bind("SUPER + F1",                  hl.dsp.exec_cmd("pgrep --quiet noctalia && killall noctalia || noctalia"))       -- Переключить noctalia
-hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. " bar-toggle"))                                         -- Переключить панель
-hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle launcher"))                              -- Лаунчер
-hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. " screenshot-region"))                                  -- Скриншот
-hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. " plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
-hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle clipboard"))                             -- Буфер обмена
-hl.bind("SUPER + SHIFT +  V",          hl.dsp.exec_cmd(v.ipc .. " clipboard-clear"))                                    -- Очистить буфер обмена
-hl.bind("SUPER + E",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center notifications"))          -- Уведомления
-hl.bind("SUPER + SHIFT + L",           hl.dsp.exec_cmd(v.ipc .. " session lock"))                                       -- Заблокировать
-hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. " panel-toggle wallpaper"))                             -- Обои
-hl.bind("SUPER + Q",                   hl.dsp.exec_cmd(v.ipc .. " panel-toggle control-center"))                        -- Панель управления 
-hl.bind("SUPER + CONTROL + Control_L", hl.dsp.exec_cmd(v.ipc .. " settings-toggle"), { release = true })                -- Настройки
-hl.bind("SUPER + ALT + Alt_L",         hl.dsp.exec_cmd(v.ipc .. " panel-toggle session"), { release = true })           -- Меню сеанса
-hl.bind("ALT + TAB",                   hl.dsp.exec_cmd(v.ipc .. " window-switcher"))                                    -- Переключатель окон
+hl.bind("F11",                         hl.dsp.exec_cmd(v.ipc .. "bar-toggle"))                                         -- Переключить панель
+hl.bind("SUPER + D",                   hl.dsp.exec_cmd(v.ipc .. "panel-toggle launcher"))                              -- Лаунчер
+hl.bind("Print",                       hl.dsp.exec_cmd(v.ipc .. "screenshot-region"))                                  -- Скриншот
+hl.bind("SUPER + CONTROL + Print",     hl.dsp.exec_cmd(v.ipc .. "plugin noctalia/screen_recorder:service all toggle")) -- Запись экрана
+hl.bind("SUPER + V",                   hl.dsp.exec_cmd(v.ipc .. "panel-toggle clipboard"))                             -- Буфер обмена
+hl.bind("SUPER + SHIFT +  V",          hl.dsp.exec_cmd(v.ipc .. "clipboard-clear"))                                    -- Очистить буфер обмена
+hl.bind("SUPER + E",                   hl.dsp.exec_cmd(v.ipc .. "panel-toggle control-center notifications"))          -- Уведомления
+hl.bind("SUPER + SHIFT + E",           hl.dsp.exec_cmd(v.ipc .. "notification-clear-history"))                         -- Очистить уведомления
+--hl.bind("SUPER + SHIFT + L",         hl.dsp.exec_cmd(v.ipc .. "session lock"))                                     -- Заблокировать
+hl.bind("SUPER + SHIFT + W",           hl.dsp.exec_cmd(v.ipc .. "panel-toggle wallpaper"))                             -- Обои
+hl.bind("SUPER + Q",                   hl.dsp.exec_cmd(v.ipc .. "panel-toggle control-center"))                        -- Панель управления 
+hl.bind("SUPER + CONTROL + Control_L", hl.dsp.exec_cmd(v.ipc .. "settings-toggle"), { release = true })                -- Настройки
+hl.bind("SUPER + ALT + Alt_L",         hl.dsp.exec_cmd(v.ipc .. "panel-toggle session"), { release = true })           -- Меню сеанса
+hl.bind("ALT + TAB",                   hl.dsp.exec_cmd(v.ipc .. "window-switcher"))                                    -- Переключатель окон
 
 -- 3. Скрипты
 hl.bind("SUPER + CONTROL + U", hl.dsp.exec_cmd(v.terminal .. " --hold zsh " .. v.scripts .. "update.sh"))               -- Обновление пакетов

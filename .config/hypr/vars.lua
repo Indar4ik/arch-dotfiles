@@ -7,5 +7,5 @@ return {
     terminal = "kitty",
     terminal1 = "alacritty",
     fileManager = "thunar",
-    ipc = "noctalia msg"
+    ipc = "noctalia msg "
 }
