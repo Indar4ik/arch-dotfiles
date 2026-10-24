@@ -1,13 +1,77 @@
 ---
 BasedOnStyle: LLVM
+
+# Базовые отступы
 UseTab: Never
 IndentWidth: 4
 TabWidth: 4
 ColumnLimit: 0
-IndentCaseLabels: true
-AllowShortIfStatementsOnASingleLine: WithoutElse
+
+# Версия языка
+Standard: Latest
+
+# Указатели и квалификаторы
+PointerAlignment: Left
+ReferenceAlignment: Left
+QualifierAlignment: Left
+
+# Компактный стиль (сохранено из вашего конфига)
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLoopsOnASingleLine: true
 AllowShortBlocksOnASingleLine: true
-AllowCaseLabelsOnASingleLine: true
-PointerAlignment: Left
+IndentCaseLabels: true
+AllowShortFunctionsOnASingleLine: Inline
+
+# Полезно для пространств имен
+NamespaceIndentation: None
+FixNamespaceComments: true
+
+# Табличное выравнивание (идеально для матриц, структур и выравнивания памяти)
+#AlignConsecutiveAssignments:
+#  Enabled: true
+#  AcrossEmptyLines: false
+#  AcrossComments: false
+#AlignConsecutiveDeclarations:
+#  Enabled: true
+#  AcrossEmptyLines: false
+#  AcrossComments: false
+#AlignConsecutiveMacros:
+#  Enabled: true
+#  AcrossEmptyLines: false
+#  AcrossComments: false
+
+# Пробелы в структурах и вызовах
+#SpaceBeforeParens: ControlStatements
+#SpaceBeforeRangeBasedForLoopColon: true
+#SpaceInEmptyBlock: false
+
+# Организация заголовков (разделяет блоки и сортирует)
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<[a-z0-9_]+>' # Стандартная библиотека (vector, algorithm, mdspan)
+    Priority: 1
+  - Regex: '^<(mpi|omp|immintrin|x86intrin)\.h>' # Системные HPC библиотеки
+    Priority: 2
+  - Regex: '^<.*' # Прочие внешние зависимости
+    Priority: 3
+  - Regex: '.*' # Локальные include
+    Priority: 4
+
+# Поддержка HPC-макросов, компиляторных расширений и прагм
+AttributeMacros:
+  - '__restrict'
+  - '__restrict__'
+  - '__attribute__'
+  - '__forceinline'
+  - '__vectorcall'
+
+StatementAttributeLikeMacros:
+  - '__assume'
+  - '__builtin_assume'
+  - '__builtin_assume_aligned'
+
+# Не дробить списки инициализации и конструкторы при ColumnLimit: 0
+KeepEmptyLinesAtTheStartOfBlocks: false
+CompactNamespaces: false
 ...

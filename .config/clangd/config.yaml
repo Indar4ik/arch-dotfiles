@@ -1,0 +1,37 @@
+CompileFlags:
+  Add:
+    - -std=c++2c
+    - -stdlib=libc++
+    - -Wall
+    - -Wextra
+  Remove:
+    - -qopenmp
+    - -fiopenmp
+    - -xHost
+    - -qopt-*
+    - -fp-model=*
+  Compiler: clang++
+
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add:
+      - performance-*
+      - modernize-*
+#     - bugprone-*
+    Remove:
+      - modernize-use-trailing-return-type
+      - modernize-use-designated-initializers
+      - modernize-use-auto
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  Designators: Yes
+
+Hover:
+  ShowAKA: Yes
+
+Index:
+  Background: Build

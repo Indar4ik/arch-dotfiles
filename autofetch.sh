@@ -20,3 +20,4 @@ cp $HOME/.zshrc ./
 cp $HOME/.vimrc ./
 cp $HOME/.p10k.zsh ./
 cp $HOME/.clang-format ./
+cp -r $CONFIG_DIR/clangd .config/
