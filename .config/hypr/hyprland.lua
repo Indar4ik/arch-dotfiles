@@ -7,6 +7,7 @@ require("monitor")
 require("input")
 
 require("appearance")
+require("scrolling")
 require("animations")
 
 require("start")

@@ -13,7 +13,6 @@ hl.layer_rule({
     blur = true,
 })
 
-hl.workspace_rule({ workspace = "9", layout = "scrolling" })
 hl.workspace_rule({ workspace = "name:coding", no_rounding = true, decorate = false, gaps_in = 0, gaps_out = 0, border_size = 1 })
 hl.workspace_rule({ workspace = "special:coding", no_rounding = true, decorate = false, gaps_in = 0, gaps_out = 0, border_size = 1 })
 

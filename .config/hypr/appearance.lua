@@ -40,4 +40,8 @@ hl.config({
         disable_splash_rendering = true,
         force_default_wallpaper = 1,
     },
+
+    binds = {
+        scroll_event_delay = 200,
+    },
 })
