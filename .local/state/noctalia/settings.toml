@@ -1,3 +1,5 @@
+config_version = 20
+
 [audio]
 enable_sounds = true
 
@@ -17,7 +19,7 @@ order = [ "default" ]
 
         [[bar.default.capsule_group]]
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g1"
         members = [ "volume", "network", "keyboard_layout" ]
         opacity = 1.0
@@ -99,8 +101,11 @@ widget_order = [
     type = "media_player"
 
         [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        album_art_background = false
+        audio_visualizer = false
         background = false
         font_family = ""
+        hide_when_no_media = true
         layout = "horizontal"
         shadow = false
 
@@ -126,6 +131,7 @@ widget_order = [
         color_1 = "primary"
         color_2 = "primary"
         mirrored = true
+        show_wave = false
         show_when_idle = false
 
     [desktop_widgets.widget.desktop-widget-0000000000000006]
@@ -187,10 +193,11 @@ pre_action_fade_seconds = 0
 address = "Moscow, Russia"
 
 [lockscreen]
-blur_intensity = 0.29999999999999999
+blur_intensity = 0.29999999329447746
 blurred_desktop = true
 fingerprint = false
 tint_intensity = 0.14999999999999999
+transition_duration = 1000
 
 [lockscreen_widgets]
 enabled = true
@@ -220,7 +227,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.0
         background_radius = 12.0
         center_password_text = true
@@ -231,6 +238,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = false
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = false
         show_weather = true
@@ -247,7 +255,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -258,6 +266,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -411,7 +420,7 @@ wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "prismlauncher", "steam", "rofi", "zathura", "hyprtoolkit", "bat", "lazygit", "yazi" ]
+    community_ids = [ "discord", "prismlauncher", "steam", "rofi", "zathura", "hyprtoolkit", "bat", "fzf", "lazygit", "yazi" ]
 
 [wallpaper]
 directory = "~/Изображения/Wallpapers"
