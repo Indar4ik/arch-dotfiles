@@ -8,7 +8,6 @@ hl.bind("SUPER + RETURN",           hl.dsp.exec_cmd(v.terminal))                
 hl.bind("SUPER + SHIFT + RETURN",   hl.dsp.exec_cmd(v.terminal1))               -- Alacritty
 hl.bind("SUPER + CONTROL + RETURN", hl.dsp.exec_cmd(v.fileManager))             -- Thunar
 hl.bind("SUPER + W",                hl.dsp.exec_cmd("firefox"))                 -- Firefox
-hl.bind("SUPER + P",                hl.dsp.exec_cmd(v.terminal1 .. " -e btop")) -- btop
 
 -- 2. Хоткеи оболочки
 hl.bind("SUPER + F1",               hl.dsp.exec_cmd("pgrep --quiet noctalia && killall noctalia || noctalia"))      -- Переключить noctalia
@@ -28,6 +27,7 @@ hl.bind("Super_L + Alt_L",          hl.dsp.exec_cmd(v.ipc .. "panel-toggle sessi
 hl.bind("ALT + TAB",                hl.dsp.exec_cmd(v.ipc .. "window-switcher"))                                    -- Переключатель окон
 
 -- 3. Скрипты
+hl.bind("SUPER + P",                hl.dsp.exec_cmd(v.terminal1 .. " -e btop"))                                     -- btop
 hl.bind("SUPER + CONTROL + U",      hl.dsp.exec_cmd(v.terminal .. " --hold zsh " .. v.scripts .. "update.sh"))      -- Обновление пакетов
 hl.bind("SUPER + CONTROL + H",      hl.dsp.exec_cmd(v.terminal .. " --hold zsh -c 'cd ".. v.hypr .. "; vim ./'"))   -- Конфиг hyprland
 hl.bind("SUPER + CONTROL + I",      hl.dsp.exec_cmd(v.terminal .. " --hold fastfetch"))                             -- Fastfetch

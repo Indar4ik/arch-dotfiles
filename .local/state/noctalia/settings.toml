@@ -427,13 +427,13 @@ directory = "~/Изображения/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+    path = "/home/indar4ik/Изображения/Wallpapers/vroomies/21.png"
 
     [wallpaper.last]
-    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+    path = "/home/indar4ik/Изображения/Wallpapers/vroomies/21.png"
 
     [wallpaper.monitors.DP-3]
-    path = "/home/indar4ik/Изображения/Wallpapers/21.png"
+    path = "/home/indar4ik/Изображения/Wallpapers/vroomies/21.png"
 
 [weather]
 address = "Moscow, Russia"
