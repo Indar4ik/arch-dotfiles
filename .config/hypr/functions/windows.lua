@@ -10,31 +10,6 @@ function windows.minimize()
     end
 end
 
-function windows.changeLayout(step)
---  local layouts   = { "dwindle", "scrolling", "master", "monocle" }
-    local layouts   = { "dwindle", "scrolling", "master" }
-    local workspace = hl.get_active_workspace()
-    if hl.get_active_special_workspace() then
-        workspace = hl.get_active_special_workspace()
-    end
-
-    local next_layout = "dwindle"
-
-    if not workspace then
-        return
-    end
-
-    for i = 1, #layouts do
-        if layouts[i] == workspace.tiled_layout then
-            local next_layout_idx = (i % #layouts) + step
-            next_layout = layouts[next_layout_idx]
-            break
-        end
-    end
-
-    hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
-end
-
 function windows.closeAll()
     local windows = hl.get_windows()
 
@@ -44,15 +19,28 @@ function windows.closeAll()
 end
 
 function windows.closeAllCurrentWorkspace()
-    local cws = hl.get_active_workspace()
-    if hl.get_active_special_workspace() then
-        cws = hl.get_active_special_workspace()
-    end
-    local windows = hl.get_windows({ workspace = cws })
+    local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
+    local windows = hl.get_windows({ workspace = workspace })
 
     for _,w in pairs(windows) do
         hl.dispatch(hl.dsp.window.close({ window = w }))
     end
+end
+
+function windows.resize()
+    local moves = {
+        {key = "H", x = -10, y = 0},
+        {key = "J", x = 0,   y = -10},
+        {key = "K", x = 0,   y = 10},
+        {key = "L", x = 10,  y = 0}
+    }
+
+    for _,m in ipairs(moves) do
+        hl.bind(m.key, hl.dsp.window.resize({ x = m.x, y = m.y, relative = true}), { repeating = true }) -- Расширить
+    end
+
+    hl.bind("CONTROL + C",     hl.dsp.submap("reset")) -- Выход
+    hl.bind("escape",          hl.dsp.submap("reset")) -- Выход
 end
 
 return windows

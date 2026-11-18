@@ -72,20 +72,21 @@ end
 
 hl.bind("SUPER + TAB", layouts.change(1))                       -- Циклическая смена лайаута на воркспейсе
 hl.bind("SUPER + SHIFT + TAB", layouts.change(-1))              -- Циклическая смена лайаута на воркспейсе в обратом порядке
-hl.bind("SUPER + BackSpace", windows.closeAllCurrentWorkspace ) -- Закрыть все окна на воркспейсе
-hl.bind("SUPER + Delete", windows.closeAll )                    -- Закрыть все окна
+hl.bind("SUPER + BackSpace", windows.closeAllCurrentWorkspace)  -- Закрыть все окна на воркспейсе
+hl.bind("SUPER + Delete", windows.closeAll)                     -- Закрыть все окна
 
 hl.bind("SUPER + R", hl.dsp.submap("resize")) -- Режим управления оконами
 hl.define_submap("resize", function()
-    for _, dir in ipairs({ "left", "right", "up", "down" }) do
-        hl.bind(dir,                 hl.dsp.window.move({ direction = dir })) -- Передвинуть
-        hl.bind("CONTROL + " .. dir, hl.dsp.window.swap({ direction = dir })) -- Поменять с соседним
-    end
+    local moves = {
+        {key = "H", x = -10, y = 0},
+        {key = "J", x = 0,   y = -10},
+        {key = "K", x = 0,   y = 10},
+        {key = "L", x = 10,  y = 0}
+    }
 
-    hl.bind("SHIFT + left",    hl.dsp.window.resize({ x = -10, y = 0, relative = true}), { repeating = true })  -- Расширить влево
-    hl.bind("SHIFT + down",    hl.dsp.window.resize({ x = 0, y = -10, relative = true}), { repeating = true })  -- Расширить вверх
-    hl.bind("SHIFT + up",      hl.dsp.window.resize({ x = 0, y = 10, relative = true}),  { repeating = true })  -- Расширить вниз
-    hl.bind("SHIFT + right",   hl.dsp.window.resize({ x = 10, y = 0, relative = true}),  { repeating = true })  -- Расширить вправо
+    for _,m in ipairs(moves) do
+        hl.bind(m.key, hl.dsp.window.resize({ x = m.x, y = m.y, relative = true}), { repeating = true }) -- Расширить
+    end
 
     hl.bind("CONTROL + C",     hl.dsp.submap("reset")) -- Выход
     hl.bind("escape",          hl.dsp.submap("reset")) -- Выход

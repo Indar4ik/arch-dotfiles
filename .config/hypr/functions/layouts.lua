@@ -2,14 +2,9 @@ local layouts = {}
 
 function layouts.change(step)
     return function ()
-    --  local layouts   = { "dwindle", "scrolling", "master", "monocle" }
-        local layouts   = { "dwindle", "scrolling", "master" }
-        local workspace = hl.get_active_workspace()
-        if hl.get_active_special_workspace() then
-            workspace = hl.get_active_special_workspace()
-        end
-
-        local next_layout = "dwindle"
+        local layouts = { "dwindle", "scrolling", "master" }
+        local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
+        local next_layout = layouts[1]
 
         if not workspace then
             return
@@ -17,20 +12,19 @@ function layouts.change(step)
 
         for i = 1, #layouts do
             if layouts[i] == workspace.tiled_layout then
-                local next_layout_idx = (i % #layouts) + step
+                local next_layout_idx = (i + step - 1) % #layouts + 1
                 next_layout = layouts[next_layout_idx]
                 break
             end
         end
 
-        hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
+        hl.workspace_rule({ workspace = workspace.name, layout = next_layout })
     end
 end
 
 function layouts.bind(bind_table)
     return function ()
-        local workspace = hl.get_active_special_workspace() or
-                          hl.get_active_workspace()
+        local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
 
         if not workspace then
             return
