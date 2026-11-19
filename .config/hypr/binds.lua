@@ -38,10 +38,10 @@ hl.bind("SUPER + ALT + SHIFT + V",  hl.dsp.exec_cmd("cliphist wipe"))           
 -- 4. Приложения
 hl.bind("SUPER + SHIFT + D",        hl.dsp.exec_cmd(v.launcher .. "type-1/style-5.rasi")) -- Rofi
 hl.bind("SUPER + T",                hl.dsp.exec_cmd("Telegram"))                          -- Telegram
-hl.bind("SUPER + G",                hl.dsp.exec_cmd("steam"))                             -- Steam
+hl.bind("SUPER + G",                hl.dsp.exec_cmd("prismlauncher"))                     -- Prism
+hl.bind("SUPER + SHIFT + G",        hl.dsp.exec_cmd("steam"))                             -- Steam
 hl.bind("SUPER + N",                hl.dsp.exec_cmd("throne"))                            -- Throne
 hl.bind("SUPER + SHIFT +  N",       hl.dsp.exec_cmd("killall Throne"))                    -- Закрыть Throne
-hl.bind("SUPER + SHIFT + G",        hl.dsp.exec_cmd("prismlauncher"))                     -- Prism
 
 -- 5. Управление окнами
 hl.bind("SUPER + SHIFT + Q",        hl.dsp.window.close())                                                -- Закрыть 

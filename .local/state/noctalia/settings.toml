@@ -7,7 +7,7 @@ enable_sounds = true
 order = [ "default" ]
 
     [bar.default]
-    background_opacity = 0.59999998658895493
+    background_opacity = 0.5999999865889549
     center = [ "weather", "Spacer1", "workspaces", "Spacer1", "group:g1" ]
     end = [ "audio_visualizer", "media", "tray", "Spacer", "date", "control-center", "clock", "notes", "notifications" ]
     font_family = "Adwaita Sans"
@@ -91,7 +91,7 @@ widget_order = [
 
     [desktop_widgets.widget.desktop-widget-0000000000000004]
     box_height = 154.23312377929688
-    box_width = 393.29446411132812
+    box_width = 393.2944641113281
     cx = 212.64723205566406
     cy = 129.10000610351562
     output = "DP-3"
@@ -123,7 +123,7 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
         background = false
         background_color = "surface"
-        background_opacity = 0.80000000000000004
+        background_opacity = 0.8
         background_padding = 10.0
         background_radius = 12.0
         bands = 64.0
@@ -148,18 +148,18 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
         background = false
         background_color = "surface"
-        background_opacity = 0.80000000000000004
+        background_opacity = 0.8
         background_padding = 10.0
         background_radius = 12.0
-        bar_width = 0.59999999999999998
-        bloom_intensity = 0.60000000000000009
+        bar_width = 0.6
+        bloom_intensity = 0.6000000000000001
         fade_when_idle = true
-        inner_diameter = 0.69999999999999996
+        inner_diameter = 0.7
         primary_color = "primary"
-        ring_opacity = 0.80000000000000004
+        ring_opacity = 0.8
         rotation_speed = 0.5
         secondary_color = "secondary"
-        sensitivity = 1.6000000000000001
+        sensitivity = 1.6
         visualization_mode = "bars_rings"
         wave_thickness = 1.0
 
@@ -181,7 +181,7 @@ widget_order = [
 
 [dock]
 auto_hide = true
-background_opacity = 0.69999998435378075
+background_opacity = 0.6999999843537807
 
 [hooks]
 started = "noctalia msg caffeine-enable"
@@ -196,7 +196,7 @@ address = "Moscow, Russia"
 blur_intensity = 0.29999999329447746
 blurred_desktop = true
 fingerprint = false
-tint_intensity = 0.14999999999999999
+tint_intensity = 0.15
 transition_duration = 1000
 
 [lockscreen_widgets]
@@ -231,7 +231,7 @@ widget_order = [
         background_opacity = 0.0
         background_radius = 12.0
         center_password_text = true
-        input_opacity = 0.59999999999999998
+        input_opacity = 0.6
         input_radius = 32.0
         layout = "regular"
         show_caps_lock = true
@@ -302,20 +302,20 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
         background = false
         background_color = "surface"
-        background_opacity = 0.80000000000000004
+        background_opacity = 0.8
         background_padding = 10.0
         background_radius = 12.0
-        bar_width = 0.59999999999999998
+        bar_width = 0.6
         bloom_intensity = 0.5
         fade_when_idle = true
-        inner_diameter = 0.69999999999999996
+        inner_diameter = 0.7
         primary_color = "primary"
-        ring_opacity = 0.80000000000000004
+        ring_opacity = 0.8
         rotation_speed = 0.5
         secondary_color = "secondary"
         sensitivity = 1.5
         visualization_mode = "all"
-        wave_thickness = 0.90000000000000002
+        wave_thickness = 0.9
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
     box_height = 200.0
@@ -338,15 +338,15 @@ widget_order = [
 enabled = true
 
 [notification]
-background_opacity = 0.59999998658895493
+background_opacity = 0.5999999865889549
 layer = "overlay"
 
 [osd]
-background_opacity = 0.59999998658895493
+background_opacity = 0.5999999865889549
 keyboard_layout = false
 lock_keys = false
 position = "top_right"
-scale = 0.95000000670552254
+scale = 0.9500000067055225
 
     [osd.kinds]
     keyboard_layout = false

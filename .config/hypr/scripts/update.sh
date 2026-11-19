@@ -2,4 +2,4 @@ paru -Syu
 #flatpak update
 cargo install-update --all
 npm update
-pipx upgrade-all
+#pipx upgrade-all
