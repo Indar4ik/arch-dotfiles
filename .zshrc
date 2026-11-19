@@ -76,14 +76,14 @@ alias mirrors="sudo cachyos-rate-mirrors"
 alias gdux="sudo gdu -x /"
 alias psfind="ps aux | rg -v rg | rg"
 alias unlockme="faillock --user $(whoami) --reset"
-alias du="du -h"
+alias lg="lazygit"
 
 alias ls="lsd"
 alias l="ls -lA"
 alias la="ls -A"
 alias lt="ls -A --tree"
-alias find="fd -H"
-#alias grep="rg"
+alias fd="fd -H"
+alias du="du -h"
 
 # Cleanup orphaned packages
 alias orph="paru -Qdtq"
