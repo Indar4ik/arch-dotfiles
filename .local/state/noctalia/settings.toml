@@ -9,12 +9,12 @@ order = [ "default" ]
     [bar.default]
     background_opacity = 0.59999998658895493
     center = [ "weather", "Spacer1", "workspaces", "Spacer1", "group:g1" ]
-    end = [ "audio_visualizer", "media", "tray", "Spacer", "date", "control-center", "clock", "notifications" ]
+    end = [ "audio_visualizer", "media", "tray", "Spacer", "date", "control-center", "clock", "notes", "notifications" ]
     font_family = "Adwaita Sans"
     font_weight = 600
     radius = 10
     shadow = false
-    start = [ "group:g2" ]
+    start = [ "group:g2", "bar", "bar_2" ]
     thickness = 24
 
         [[bar.default.capsule_group]]
@@ -361,12 +361,12 @@ video_codec = "av1"
 
 [plugins]
 enabled = [
-    "noctalia/bongocat",
     "noctalia/kaomoji",
     "noctalia/notes",
     "noctalia/timer",
     "noctalia/wallhaven",
-    "noctalia/screen_recorder"
+    "noctalia/screen_recorder",
+    "noctalia/wallpaper_depth"
 ]
 
     [[plugins.source]]
@@ -455,6 +455,14 @@ bands = 28
 centered = false
 width = 112.0
 
+[widget.bar]
+enabled = false
+type = "noctalia/timer:bar"
+
+[widget.bar_2]
+enabled = false
+type = "noctalia/wallpaper_depth:bar"
+
 [widget.bongocat]
 audio_spectrum = true
 script = "scripts/bongocat.lua"
@@ -493,6 +501,9 @@ max_length = 270
 
 [widget.network]
 show_label = false
+
+[widget.notes]
+type = "noctalia/notes:notes"
 
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
