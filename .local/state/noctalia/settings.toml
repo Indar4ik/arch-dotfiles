@@ -381,7 +381,7 @@ enabled = [
 
 [shell]
 app_icon_color = "on_surface"
-avatar_path = "/home/indar4ik/face.png"
+avatar_path = "/home/indar4ik/Изображения/face.png"
 clipboard_history_max_entries = 512
 password_style = "random"
 polkit_agent = true
